@@ -1,0 +1,205 @@
+<div style="font-weight: bold; margin-bottom: 5px;">
+    {% if PI_TotalCGST != null and PI_TotalCGST != 0 %}
+    <div>
+        <div style="float: left;">SGST@{{SGST_Percent|floatformat}}% :</div>
+        {% if Type == "M" %}
+        <div style="float: right;">{{total_order_SGST|floatformat:"2"}}</div>
+        {% endif %}
+        {% if Type == "A" %}
+        <div style="float: right;">{{PI_TotalSGST|floatformat:"2"}}</div>
+        {% endif %}
+    </div>
+    {% if TCSAmount != null and TCSAmount != 0 %}
+    <div>
+        <div style="float: left;">TCS@{{TCS_Percent|floatformat}}% :</div>
+        <div style="float: right;">{{TCSAmount|floatformat:"2"}}</div>
+    </div>
+    {% endif %}
+    {% endif %}
+    {% if PI_TotalSGST != null and PI_TotalSGST != 0 %}
+    <div>
+        <div style="float: left;">CGST@{{CGST_Percent|floatformat}}% :</div>
+        {% if Type == "M" %}
+        <div style="float: right;">{{total_order_CGST|floatformat:"2"}}</div>
+        {% endif %}
+        {% if Type == "A" %}
+        <div style="float: right;">{{PI_TotalCGST|floatformat:"2"}}</div>
+        {% endif %}
+    </div>
+    {% if TCSAmount != null and TCSAmount != 0 %}
+    <div>
+        <div style="float: left;">TCS@{{TCS_Percent|floatformat}}% :</div>
+        <div style="float: right;">{{TCSAmount|floatformat:"2"}}</div>
+    </div>
+    {% endif %}
+    {% endif %}
+    {% if PI_TotalIGST != null and PI_TotalIGST != 0 %}
+    <div>
+        <div style="float: left;">IGST@{{IGST_Percent|floatformat}}% :</div>
+        {% if Type == "M" %}
+        <div style="float: right;">{{total_order_IGST|floatformat:"2"}}</div>
+        {% endif %}
+        {% if Type == "A" %}
+        <div style="float: right;">{{PI_TotalIGST|floatformat:"2"}}</div>
+        {% endif %}
+    </div>
+    {% if TCSAmount != null and TCSAmount != 0 %}
+    <div>
+        <div style="float: left;">TCS@{{TCS_Percent|floatformat}}% :</div>
+        <div style="float: right;">{{TCSAmount|floatformat:"2"}}</div>
+    </div>
+    {% endif %}
+    {% endif %}
+    {% if TCSAmount != null and TCSAmount != 0 %}
+    <div>
+        <div style="float: left;">TCS@{{TCS_Percent|floatformat}}% :</div>
+        <div style="float: right;">{{TCSAmount|floatformat:"2"}}</div>
+    </div>
+    {% endif %}
+
+    {% if zero_CGST == 0 and zero_CGST_value == 0 %}
+    <div>
+        <div style="float: left;">CGST@{{CGST_Percent|floatformat}}% :</div>
+        {% if Type == "M" %}
+        <div style="float: right;">{{total_order_CGST|floatformat:"2"}}</div>
+        {% endif %}
+        {% if Type == "A" %}
+        <div style="float: right;">{{PI_TotalCGST|floatformat:"2"}}</div>
+        {% endif %}
+
+    </div>
+    {% endif %}
+    {% if zero_SGST == 0 and zero_SGST_value == 0 %}
+    <div>
+        <div style="float: left;">SGST@{{SGST_Percent|floatformat}}% :</div>
+        {% if Type == "M" %}
+        <div style="float: right;">{{total_order_SGST|floatformat:"2"}}</div>
+        {% endif %}
+        {% if Type == "A" %}
+        <div style="float: right;">{{PI_TotalSGST|floatformat:"2"}}</div>
+        {% endif %}
+    </div>
+    {% endif %}
+    {% if zero_IGST == 0 and zero_IGST_value == 0 %}
+    <div>
+        <div style="float: left;">IGST@{{IGST_Percent|floatformat}}% :</div>
+        {% if Type == "M" %}
+        <div style="float: right;">{{total_order_IGST|floatformat:"2"}}</div>
+        {% endif %}
+        {% if Type == "A" %}
+        <div style="float: right;">{{PI_TotalIGST|floatformat:"2"}}</div>
+        {% endif %}
+
+    </div>
+    {% endif %}
+
+    {% if zero_CGST == 0 and zero_CGST_value != 0 %}
+    <div>
+        <div style="float: left;">CGST@{{CGST_Percent|floatformat}}% :</div>
+        {% if Type == "M" %}
+        <div style="float: right;">{{total_order_CGST|floatformat:"2"}}</div>
+        {% endif %}
+        {% if Type == "A" %}
+        <div style="float: right;">{{PI_TotalCGST|floatformat:"2"}}</div>
+        {% endif %}
+    </div>
+    {% endif %}
+    {% if zero_SGST == 0 and zero_SGST_value != 0 %}
+
+    <div>
+        <div style="float: left;">SGST@{{SGST_Percent|floatformat}}% :</div>
+        {% if Type == "M" %}
+        <div style="float: right;">{{total_order_SGST|floatformat:"2"}}</div>
+        {% endif %}
+        {% if Type == "A" %}
+        <div style="float: right;">{{PI_TotalSGST|floatformat:"2"}}</div>
+        {% endif %}
+
+    </div>
+    {% endif %}
+    {% if zero_IGST == 0 and zero_IGST_value != 0 %}
+
+    <div>
+        <div style="float: left;">IGST@{{IGST_Percent|floatformat}}% :</div>
+        {% if Type == "M" %}
+        <div style="float: right;">{{total_order_IGST|floatformat:"2"}}</div>
+        {% endif %}
+        {% if Type == "A" %}
+        <div style="float: right;">{{PI_TotalIGST|floatformat:"2"}}</div>
+        {% endif %}
+
+    </div>
+    {% endif %}
+
+    {% if zero_CGST != 0 and zero_CGST_value == 0 %}
+    <div>
+        <div style="float: left;">CGST@{{CGST_Percent|floatformat}}% :</div>
+        {% if Type == "M" %}
+        <div style="float: right;">{{total_order_CGST|floatformat:"2"}}</div>
+        {% endif %}
+        {% if Type == "A" %}
+        <div style="float: right;">{{PI_TotalCGST|floatformat:"2"}}</div>
+        {% endif %}
+
+    </div>
+    {% endif %}
+    {% if zero_SGST != 0 and zero_SGST_value == 0 %}
+    <div>
+        <div style="float: left;">SGST@{{SGST_Percent|floatformat}}% :</div>
+        {% if Type == "M" %}
+        <div style="float: right;">{{total_order_SGST|floatformat:"2"}}</div>
+        {% endif %}
+        {% if Type == "A" %}
+        <div style="float: right;">{{PI_TotalSGST|floatformat:"2"}}</div>
+        {% endif %}
+    </div>
+    {% endif %}
+    {% if zero_IGST != 0 and zero_IGST_value == 0 %}
+    <div>
+        <div style="float: left;">IGST@{{IGST_Percent|floatformat}}% :</div>
+        {% if Type == "M" %}
+        <div style="float: right;">{{total_order_IGST|floatformat:"2"}}</div>
+        {% endif %}
+        {% if Type == "A" %}
+        <div style="float: right;">{{PI_TotalIGST|floatformat:"2"}}</div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    {% if zero_CGST != 0 and zero_CGST_value != 0 %}
+    <div>
+        <div style="float: left;">CGST@{{CGST_Percent|floatformat}}% :</div>
+        {% if Type == "M" %}
+        <div style="float: right;">{{total_order_CGST|floatformat:"2"}}</div>
+        {% endif %}
+        {% if Type == "A" %}
+        <div style="float: right;">{{PI_TotalCGST|floatformat:"2"}}</div>
+        {% endif %}
+    </div>
+    {% endif %}
+    {% if zero_SGST != 0 and zero_SGST_value != 0 %}
+
+    <div>
+        <div style="float: left;">SGST@{{SGST_Percent|floatformat}}% :</div>
+        {% if Type == "M" %}
+        <div style="float: right;">{{total_order_SGST|floatformat:"2"}}</div>
+        {% endif %}
+        {% if Type == "A" %}
+        <div style="float: right;">{{PI_TotalSGST|floatformat:"2"}}</div>
+        {% endif %}
+    </div>
+    {% endif %}
+    {% if zero_IGST != 0 and zero_IGST_value != 0 %}
+    <div>
+        <div style="float: left;">IGST@{{IGST_Percent|floatformat}}% :</div>
+        {% if Type == "M" %}
+        <div style="float: right;">{{total_order_IGST|floatformat:"2"}}</div>
+        {% endif %}
+        {% if Type == "A" %}
+        <div style="float: right;">{{PI_TotalIGST|floatformat:"2"}}</div>
+        {% endif %}
+
+    </div>
+    {% endif %}
+
+</div>
