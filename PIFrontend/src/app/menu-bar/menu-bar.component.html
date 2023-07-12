@@ -31,7 +31,11 @@
                     <a routerLink="/proforma/RegionMaster" routerLinkActive="active-list-item">Proforma Region</a>
                 </li>
                 <li *ngIf="suser == 'true'">
-                    <a routerLink="/proforma/ProjectManagerMaster" routerLinkActive="active-list-item">Project Manager</a>
+                    <a routerLink="/proforma/ProjectManagerMaster" routerLinkActive="active-list-item">Project
+                        Manager</a>
+                </li>
+                <li *ngIf="suser == 'true'">
+                    <a routerLink="/proforma/RegionMaster" routerLinkActive="active-list-item">Proforma Access</a>
                 </li>
                 <li>
                     <span class="pointer" (click)="logoutuser()">Logout</span>
@@ -40,4 +44,3 @@
         </div>
     </div>
 </div>
-
